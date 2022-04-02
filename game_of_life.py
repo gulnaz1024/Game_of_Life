@@ -1,10 +1,10 @@
 from copy import deepcopy
-import time, os
+import time
+import os
 import threading
 import numpy as np
 from tkinter.ttk import *
 from tkinter import *
-
 
 
 class Board():
@@ -25,10 +25,10 @@ class Board():
         except AssertionError:
             print("one of the X indices of your on_values exceeds board width")
             exit()
-        
+
         for i in on_values:
             self.board_NP[i[1]+1, i[0]+1] = 1
-        
+
         print(self.board_NP)
         print("\n")
 
@@ -61,7 +61,7 @@ class Board():
                     board_state[i+1, j+1] = 0
 
         self.board_NP = deepcopy(board_state)
-        if self.board_NP.any() != True:
+        if self.board_NP.any() is not True:
             for i in self.on_values:
                 self.board_NP[i[1]+1, i[0]+1] = 1
 
@@ -88,25 +88,21 @@ if __name__ == '__main__':
     root.geometry("600x400")
     # colours = ['white', 'black']
 
-    demo_board = Board(5, 5, [[1,1], [2,3], [2,2], [3,4], [3,3], [4,4]])
+    demo_board = Board(5, 5, [[1, 1], [2, 3], [2, 2], [3, 4], [3, 3], [4, 4]])
 
     buttons = []
     for i in range(demo_board.height+1):
         b = []
         for j in range(demo_board.width+1):
-            button = Button(text = '', width=6, height=4)
+            button = Button(text='', width=6, height=4)
             button.grid(row=i, column=j)
             b.append(button)
         buttons.append(b)
-        b=[]
+        b = []
     buttons = np.array(buttons)
 
-    #demo_board.draw()
-    draw = threading.Thread(target=demo_board.draw) 
+    # demo_board.draw()
+    draw = threading.Thread(target=demo_board.draw)
     draw.daemon = True
     draw.start()
     root.mainloop()
-
-
-    
-
