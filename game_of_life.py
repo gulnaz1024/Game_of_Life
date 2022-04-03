@@ -75,9 +75,9 @@ class Board():
             try:
                 for i in buttons:
                     for j in i:
-                        j.configure(bg="white")
+                        j.configure(bg="grey")
                 for i in np.array(self.board_NP.nonzero()).transpose():
-                    buttons[i[0], i[1]].configure(bg="black")
+                    buttons[i[0], i[1]].configure(bg="yellow")
             except IndexError:
                 pass
             time.sleep(0.5)

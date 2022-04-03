@@ -24,8 +24,13 @@ except ImportError:
 
 [[3,1], [4,3], [4,2], [5,4], [5,3], [6,4]]
 
+## Demo
 
-### Sources
+<br>
+<img src='images/demo.gif' />
+
+
+## Sources
 
 > [https://github.com/igorbrodzinski/game-of-life-tkinter](https://github.com/igorbrodzinski/game-of-life-tkinter)
 
@@ -42,7 +47,5 @@ except ImportError:
 > [https://question-it.com/questions/2525866/pochemu-moja-realizatsija-tkinter-game-of-life-postepenno-zamedljaetsja](https://question-it.com/questions/2525866/pochemu-moja-realizatsija-tkinter-game-of-life-postepenno-zamedljaetsja)
 
 > [https://github.com/Edgar-LZ/Game-of-life](https://github.com/Edgar-LZ/Game-of-life)
-
-> [https://github.com/Edgar-LZ/Game-of-life/blob/master/gameoflife.py](https://github.com/Edgar-LZ/Game-of-life/blob/master/gameoflife.py)
 
 > [https://pastebin.com/e6ED24H8](https://pastebin.com/e6ED24H8)
