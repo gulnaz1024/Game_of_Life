@@ -3,6 +3,7 @@ import time
 import os
 import threading
 import numpy as np
+from random import randint
 from tkinter.ttk import *
 from tkinter import *
 
@@ -77,18 +78,26 @@ class Board():
                     for j in i:
                         j.configure(bg="grey")
                 for i in np.array(self.board_NP.nonzero()).transpose():
-                    buttons[i[0], i[1]].configure(bg="yellow")
+                    buttons[i[0], i[1]].configure(bg="cyan")
             except IndexError:
                 pass
             time.sleep(0.5)
+    
 
 
 if __name__ == '__main__':
     root = Tk()
-    root.geometry("600x400")
+    root.geometry("600x500")
     # colours = ['white', 'black']
 
-    demo_board = Board(5, 5, [[1, 1], [2, 3], [2, 2], [3, 4], [3, 3], [4, 4]])
+    # cells = [[3, 1], [4, 3], [4, 2], [5, 4], [5, 3], [6, 4]]
+
+    cells = []
+    for i in range (randint(5, 15)):
+        x = randint(1, 5)
+        y = randint(1, 5)
+        cells.append([x, y])
+    demo_board = Board(9, 5, cells)
 
     buttons = []
     for i in range(demo_board.height+1):
