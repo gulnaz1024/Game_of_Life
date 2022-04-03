@@ -61,7 +61,7 @@ class Board():
                     board_state[i+1, j+1] = 0
 
         self.board_NP = deepcopy(board_state)
-        if self.board_NP.any() is not True:
+        if not self.board_NP.any():
             for i in self.on_values:
                 self.board_NP[i[1]+1, i[0]+1] = 1
 
