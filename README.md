@@ -27,7 +27,7 @@ except ImportError:
 ## Demo
 
 <br>
-<img src='images/demo.gif' />
+<img src='cells.gif' />
 
 
 ## Sources
@@ -42,10 +42,10 @@ except ImportError:
 
 > [https://python-course.eu/tkinter/the-game-of-life-in-python.php](https://python-course.eu/tkinter/the-game-of-life-in-python.php)
 
-> [https://python-course.eu/tkinter/the-game-of-life-in-python.php](https://python-course.eu/tkinter/the-game-of-life-in-python.php)
-
 > [https://question-it.com/questions/2525866/pochemu-moja-realizatsija-tkinter-game-of-life-postepenno-zamedljaetsja](https://question-it.com/questions/2525866/pochemu-moja-realizatsija-tkinter-game-of-life-postepenno-zamedljaetsja)
 
 > [https://github.com/Edgar-LZ/Game-of-life](https://github.com/Edgar-LZ/Game-of-life)
 
 > [https://pastebin.com/e6ED24H8](https://pastebin.com/e6ED24H8)
+
+> [GIF Maker](https://ezgif.com/)
