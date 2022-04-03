@@ -28,12 +28,21 @@ except ImportError:
 ### Sources
 
 > [https://github.com/igorbrodzinski/game-of-life-tkinter](https://github.com/igorbrodzinski/game-of-life-tkinter)
+
 > [https://github.com/ColeB2/GameofLife](https://github.com/ColeB2/GameofLife)
+
 > [https://forum.level1techs.com/t/game-of-life-python-tkinter/113480/4](https://forum.level1techs.com/t/game-of-life-python-tkinter/113480/4)
+
 > [https://stackoverflow.com/questions/35106391/game-of-life-python-too-many-resources](https://stackoverflow.com/questions/35106391/game-of-life-python-too-many-resources)
+
 > [https://python-course.eu/tkinter/the-game-of-life-in-python.php](https://python-course.eu/tkinter/the-game-of-life-in-python.php)
+
 > [https://python-course.eu/tkinter/the-game-of-life-in-python.php](https://python-course.eu/tkinter/the-game-of-life-in-python.php)
+
 > [https://question-it.com/questions/2525866/pochemu-moja-realizatsija-tkinter-game-of-life-postepenno-zamedljaetsja](https://question-it.com/questions/2525866/pochemu-moja-realizatsija-tkinter-game-of-life-postepenno-zamedljaetsja)
+
 > [https://github.com/Edgar-LZ/Game-of-life](https://github.com/Edgar-LZ/Game-of-life)
+
 > [https://github.com/Edgar-LZ/Game-of-life/blob/master/gameoflife.py](https://github.com/Edgar-LZ/Game-of-life/blob/master/gameoflife.py)
+
 > [https://pastebin.com/e6ED24H8](https://pastebin.com/e6ED24H8)
