@@ -82,7 +82,6 @@ class Board():
             except IndexError:
                 pass
             time.sleep(0.5)
-    
 
 
 if __name__ == '__main__':
@@ -93,7 +92,7 @@ if __name__ == '__main__':
     # cells = [[3, 1], [4, 3], [4, 2], [5, 4], [5, 3], [6, 4]]
 
     cells = []
-    for i in range (randint(5, 15)):
+    for i in range(randint(5, 15)):
         x = randint(1, 5)
         y = randint(1, 5)
         cells.append([x, y])
