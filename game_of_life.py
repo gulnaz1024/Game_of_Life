@@ -40,14 +40,6 @@ class Board():
         on = len(np.array(self.sub[cell[0]][cell[1]].nonzero()).transpose())
         if self.board_NP[cell[0]+1, cell[1]+1] == 1:
             on -= 1
-        # # Any live cell with two or three live neighbours survives
-        # if self.board_NP[cell[0]+1, cell[1]+1] == 1 and (on == 2 or on == 3):
-        #     return True
-        # # Any dead cell with three live neighbours becomes a live cell
-        # elif self.board_NP[cell[0]+1, cell[1]+1] == 0 and on == 3:
-        #     return True
-        # else:
-        #     return False
 
         # Any dead cell with 2 or 4 live neighbours becomes alive
         if self.board_NP[cell[0]+1, cell[1]+1] == 0 and (on == 2 or on == 4):
@@ -85,11 +77,11 @@ class Board():
                 print(row)
             print("\n")
             try:
-                for i in buttons:
+                for i in field:
                     for j in i:
                         j.configure(bg="grey")
                 for i in np.array(self.board_NP.nonzero()).transpose():
-                    buttons[i[0], i[1]].configure(bg="cyan")
+                    field[i[0], i[1]].configure(bg="cyan")
             except IndexError:
                 pass
             time.sleep(0.5)
@@ -99,7 +91,6 @@ if __name__ == '__main__':
     root = Tk()
     root.geometry("600x500")
     # colours = ['white', 'black']
-
     # cells = [[3, 1], [4, 3], [4, 2], [5, 4], [5, 3], [6, 4]]
 
     cells = []
@@ -109,16 +100,16 @@ if __name__ == '__main__':
         cells.append([x, y])
     demo_board = Board(9, 5, cells)
 
-    buttons = []
+    field = []
     for i in range(demo_board.height+1):
-        b = []
+        f = []
         for j in range(demo_board.width+1):
-            button = Button(text='', width=6, height=4)
-            button.grid(row=i, column=j)
-            b.append(button)
-        buttons.append(b)
-        b = []
-    buttons = np.array(buttons)
+            field_cell = Button(text='', width=6, height=4)
+            field_cell.grid(row=i, column=j)
+            f.append(field_cell)
+        field.append(f)
+        f = []
+    field = np.array(field)
 
     # demo_board.draw()
     draw = threading.Thread(target=demo_board.draw)
