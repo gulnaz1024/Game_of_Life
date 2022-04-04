@@ -52,8 +52,8 @@ class Board():
         # Any dead cell with 2 or 4 live neighbours becomes alive
         if self.board_NP[cell[0]+1, cell[1]+1] == 0 and (on == 2 or on == 4):
             return True
-        # Any live cell with 3 live neighbours becomes a dead cell
-        elif self.board_NP[cell[0]+1, cell[1]+1] == 1 and on == 3:
+        # Any live cell with 5 live neighbours becomes a dead cell
+        elif self.board_NP[cell[0]+1, cell[1]+1] == 1 and on == 5:
             return False
         else:
             return False
