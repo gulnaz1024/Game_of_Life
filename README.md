@@ -1,13 +1,7 @@
-Игру «Жизнь» изобрел математик Джон Хортон Конвей в 1970 году. 
+# Game of life
+The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 
-Правила игры «Жизнь» достаточно простые:
-
-«Жизнь» разыгрывается на бесконечном клеточном поле.
-У каждой клетки 8 соседних клеток.
-В каждой клетке может жить существо.
-Существо с двумя или тремя соседями выживает в следующем поколении, иначе погибает от одиночества или перенаселённости.
-В пустой клетке с тремя соседями в следующем поколении рождается существо [1].
-
+## Classical rules
 
 These rules, which compare the behavior of the automaton to real life, can be condensed into the following:
 
@@ -15,14 +9,11 @@ Any live cell with two or three live neighbours survives.
 Any dead cell with three live neighbours becomes a live cell.
 All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 
+## My own rules
 
-try:
-    import tkinter as tk
-except ImportError:
-    import Tkinter as tk
+Any dead cell with 2 or 4 live neighbours becomes alive
+Any live cell with 3 live neighbours becomes a dead cell
 
-
-[[3,1], [4,3], [4,2], [5,4], [5,3], [6,4]]
 
 ## Demo
 
@@ -49,3 +40,8 @@ except ImportError:
 > [https://pastebin.com/e6ED24H8](https://pastebin.com/e6ED24H8)
 
 > [GIF Maker](https://ezgif.com/)
+
+try:
+    import tkinter as tk
+except ImportError:
+    import Tkinter as tk

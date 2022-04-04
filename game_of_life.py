@@ -40,10 +40,21 @@ class Board():
         on = len(np.array(self.sub[cell[0]][cell[1]].nonzero()).transpose())
         if self.board_NP[cell[0]+1, cell[1]+1] == 1:
             on -= 1
-        if self.board_NP[cell[0]+1, cell[1]+1] == 1 and (on == 2 or on == 3):
+        # # Any live cell with two or three live neighbours survives
+        # if self.board_NP[cell[0]+1, cell[1]+1] == 1 and (on == 2 or on == 3):
+        #     return True
+        # # Any dead cell with three live neighbours becomes a live cell
+        # elif self.board_NP[cell[0]+1, cell[1]+1] == 0 and on == 3:
+        #     return True
+        # else:
+        #     return False
+
+        # Any dead cell with 2 or 4 live neighbours becomes alive
+        if self.board_NP[cell[0]+1, cell[1]+1] == 0 and (on == 2 or on == 4):
             return True
-        elif self.board_NP[cell[0]+1, cell[1]+1] == 0 and on == 3:
-            return True
+        # Any live cell with 3 live neighbours becomes a dead cell
+        elif self.board_NP[cell[0]+1, cell[1]+1] == 1 and on == 3:
+            return False
         else:
             return False
 
